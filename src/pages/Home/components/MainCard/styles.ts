@@ -79,6 +79,7 @@ export const Link = styled.a`
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  border-bottom: 1px solid transparent;
 
   color: ${({ theme }) => theme['blue-light']};
 
