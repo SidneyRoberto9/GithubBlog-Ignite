@@ -5,12 +5,16 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        pointer-events: none;
     }
 
     :focus {
         outline: none;
         box-shadow: 0 0 0 2px ${({ theme }) => theme['blue-light']};
+    }
+    
+    img {
+        pointer-events: none;
+        user-select: none;
     }
 
     body {

@@ -1,11 +1,12 @@
 import { MainCard } from "./components/MainCard";
+import { Search } from "./components/Search";
 import { HomeContainer } from "./styles";
 
 export function Home() {
   return (
     <HomeContainer>
       <MainCard />
-      <h1>Home</h1>
+      <Search />
     </HomeContainer>
   )
 }

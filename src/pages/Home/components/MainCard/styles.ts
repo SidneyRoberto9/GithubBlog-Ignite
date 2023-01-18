@@ -78,16 +78,20 @@ export const Link = styled.a`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 
   color: ${({ theme }) => theme['blue-light']};
 
   span {
     font: 700 0.75rem 'Nunito', sans-serif;
     line-height: 1.6;
-    cursor: pointer;
   }
 
   svg {
-    cursor: pointer;
+    margin-bottom: 0.135rem;
+  }
+
+  &:hover {
+    border-bottom: 1px solid ${({ theme }) => theme['blue-light']};
   }
 `
