@@ -5,3 +5,10 @@ export const HomeContainer = styled.div`
   max-width: 1120px;
   margin: 0 auto;
 `
+
+export const CardListContainer = styled.div`
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+`
