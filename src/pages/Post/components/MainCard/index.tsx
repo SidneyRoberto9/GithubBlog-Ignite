@@ -1,10 +1,17 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faAngleLeft, faArrowUpRightFromSquare, faCalendarDay, faComment } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { formatDistanceToNow } from "date-fns";
+import ptBR from "date-fns/locale/pt-BR";
 
+import { Issue } from "../../../../@types/github";
 import { Icons, Links, MainCardComponent, Nav, Navlink } from "./styles";
 
-export function MainCard() {
+interface MainCardProps {
+  currentIssue: Issue
+}
+
+export function MainCard({ currentIssue }: MainCardProps) {
   return (
     <MainCardComponent>
       <Links>
@@ -13,12 +20,7 @@ export function MainCard() {
           <ins>voltar</ins>
         </Nav>
 
-        <Navlink
-          href={
-            'https://efficient-sloth-d85.notion.site/Desafio-03-Github-Blog-13593953670346908462ddc648d42cf1'
-          }
-          target={'_blank'}
-        >
+        <Navlink href={currentIssue.html_url} target={'_blank'}>
           <ins>ver no github</ins>
           <FontAwesomeIcon
             icon={faArrowUpRightFromSquare}
@@ -28,7 +30,7 @@ export function MainCard() {
         </Navlink>
       </Links>
 
-      <h1>JavaScript data types and data structures</h1>
+      <h1>{currentIssue.title}</h1>
 
       <Icons>
         <span>
@@ -38,12 +40,18 @@ export function MainCard() {
 
         <span>
           <FontAwesomeIcon icon={faCalendarDay} />
-          <ins>Há 1 dia</ins>
+          <ins>
+            {' '}
+            {formatDistanceToNow(new Date(currentIssue.created_at), {
+              addSuffix: true,
+              locale: ptBR,
+            })}
+          </ins>
         </span>
 
         <span>
           <FontAwesomeIcon icon={faComment} />
-          <ins>5 Comentários</ins>
+          <ins>{currentIssue.comments + ' '} Comentários</ins>
         </span>
       </Icons>
     </MainCardComponent>
