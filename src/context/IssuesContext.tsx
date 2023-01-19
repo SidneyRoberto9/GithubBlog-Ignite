@@ -1,8 +1,8 @@
-import axios from "axios";
-import { ReactNode, useEffect, useState } from "react";
-import { createContext } from "use-context-selector";
+import { ReactNode, useEffect, useState } from 'react'
+import { createContext } from 'use-context-selector'
 
-import { Issue } from "../@types/github";
+import { Issue } from '../@types/github'
+import { issuesApi } from '../lib/axios'
 
 interface IssuesContextType {
   Issues: Issue[]
@@ -20,9 +20,13 @@ export function IssuesProvider({ children }: IssuesProviderProps) {
   const [Issues, setIssues] = useState<Issue[]>([])
 
   async function getIssues(query?: string) {
-    const { data } = await axios.get(
-      'https://api.github.com/search/issues?q=%20repo:SidneyRoberto9/GithubBlog-Ignite',
-    )
+    const repoName = '%20repo:SidneyRoberto9/GithubBlog-Ignite'
+
+    const { data } = await issuesApi.get('', {
+      params: {
+        q: query === undefined ? repoName : query + repoName,
+      },
+    })
 
     setIssues(data.items)
   }
