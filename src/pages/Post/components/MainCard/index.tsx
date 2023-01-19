@@ -1,11 +1,14 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faAngleLeft, faArrowUpRightFromSquare, faCalendarDay, faComment } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { formatDistanceToNow } from "date-fns";
-import ptBR from "date-fns/locale/pt-BR";
+import { formatDistanceToNow } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 
-import { Issue } from "../../../../@types/github";
-import { Icons, Links, MainCardComponent, Nav, Navlink } from "./styles";
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import {
+    faAngleLeft, faArrowUpRightFromSquare, faCalendarDay, faComment
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { Issue } from '../../../../@types/github';
+import { Icons, Links, MainCardComponent, Nav, Navlink } from './styles';
 
 interface MainCardProps {
   currentIssue: Issue

@@ -1,10 +1,10 @@
-import { useParams } from 'react-router-dom'
-import { useContextSelector } from 'use-context-selector'
+import { useParams } from 'react-router-dom';
+import { useContextSelector } from 'use-context-selector';
 
-import { IssuesContext } from '../../context/IssuesContext'
-import { MainCard } from './components/MainCard'
-import { MarkDownBody } from './components/MarkDownBody'
-import { PostContainer } from './styles'
+import { IssuesContext } from '../../context/IssuesContext';
+import { MainCard } from './components/MainCard';
+import { MarkDownBody } from './components/MarkDownBody';
+import { PostContainer } from './styles';
 
 export function Post() {
   const { id } = useParams()

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SearchContainer = styled.div`
   width: 100%;
@@ -44,6 +44,8 @@ export const SearchContainer = styled.div`
 
     font: 400 1rem 'Nunito', sans-serif;
     line-height: 1.6;
+
+    color: ${({ theme }) => theme['blue-400']};
 
     &::placeholder {
       color: ${({ theme }) => theme['blue-400']};

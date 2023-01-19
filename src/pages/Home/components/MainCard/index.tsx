@@ -1,20 +1,21 @@
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import {
-  faArrowUpRightFromSquare,
-  faBuilding,
-  faUserGroup,
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useContextSelector } from 'use-context-selector'
+import { useContextSelector } from 'use-context-selector';
 
-import { GithubAccountContext } from '../../../../context/githubAccount'
-import { Icons, Info, Link, MainCardContainer } from './styles'
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import {
+    faArrowUpRightFromSquare, faBuilding, faUserGroup
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { GithubAccountContext } from '../../../../context/githubAccount';
+import { Icons, Info, Link, MainCardContainer } from './styles';
 
 export function MainCard() {
   const accountData = useContextSelector(
     GithubAccountContext,
     ({ account }) => account,
   )
+
+  if (accountData === undefined) return <h1>Carregando...</h1>
 
   return (
     <MainCardContainer>

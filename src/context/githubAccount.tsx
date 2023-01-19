@@ -1,8 +1,8 @@
-import { ReactNode, useEffect, useState } from 'react'
-import { createContext } from 'use-context-selector'
+import { ReactNode, useEffect, useState } from 'react';
+import { createContext } from 'use-context-selector';
 
-import { GithubAccount } from '../@types/github'
-import { gitHubUserApi } from '../lib/axios'
+import { GithubAccount } from '../@types/github';
+import { gitHubUserApi } from '../lib/axios';
 
 interface GithubAccountContextType {
   account: GithubAccount

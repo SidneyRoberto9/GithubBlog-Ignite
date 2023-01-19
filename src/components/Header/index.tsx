@@ -1,7 +1,7 @@
-import left from "../../assets/left-effect.svg";
-import right from "../../assets/right-effect.svg";
-import terminal from "../../assets/terminal.svg";
-import { HeaderContainer, HeaderContent } from "./styles";
+import left from '../../assets/left-effect.svg';
+import right from '../../assets/right-effect.svg';
+import terminal from '../../assets/terminal.svg';
+import { HeaderContainer, HeaderContent } from './styles';
 
 export function Header() {
   return (

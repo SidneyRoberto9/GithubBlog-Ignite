@@ -1,6 +1,6 @@
-import 'github-markdown-css'
+import 'github-markdown-css';
 
-import { MarkDown } from './styles'
+import { MarkDown } from './styles';
 
 interface MarkDownBodyProps {
   body: string

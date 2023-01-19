@@ -1,8 +1,8 @@
-import { formatDistanceToNow } from "date-fns";
-import ptBR from "date-fns/locale/pt-BR";
-import RemoveMarkdown from "remove-markdown";
+import { formatDistanceToNow } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
+import RemoveMarkdown from 'remove-markdown';
 
-import { CardContainer } from "./styles";
+import { CardContainer } from './styles';
 
 interface CardProps {
   id: number
