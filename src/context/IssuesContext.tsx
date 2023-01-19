@@ -20,13 +20,15 @@ export function IssuesProvider({ children }: IssuesProviderProps) {
   const [Issues, setIssues] = useState<Issue[]>([])
 
   async function getIssues(query?: string) {
-    const repoName = '%20repo:SidneyRoberto9/GithubBlog-Ignite'
+    const repoName = 'repo:SidneyRoberto9/GithubBlog-Ignite'
 
     const { data } = await issuesApi.get('', {
       params: {
         q: query === undefined ? repoName : query + repoName,
       },
     })
+
+    console.log(data)
 
     setIssues(data.items)
   }
