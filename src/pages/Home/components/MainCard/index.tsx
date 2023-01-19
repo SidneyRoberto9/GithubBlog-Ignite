@@ -3,18 +3,9 @@ import { faArrowUpRightFromSquare, faBuilding, faUserGroup } from "@fortawesome/
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 
+import { GithubAccount } from "../../../../@types/github";
 import { gitHubUserApi } from "../../../../lib/axios";
 import { Icons, Info, Link, MainCardContainer } from "./styles";
-
-interface GithubAccount {
-  bio: string
-  name: string
-  login: string
-  company: string
-  html_url: string
-  followers: number
-  avatar_url: string
-}
 
 export function MainCard() {
   const [accountData, setAccountData] = useState<GithubAccount>(
@@ -22,17 +13,9 @@ export function MainCard() {
   )
 
   async function getGithubAccount() {
-    const { data } = await gitHubUserApi.get('SidneyRoberto9')
+    const { data } = await gitHubUserApi.get<GithubAccount>('SidneyRoberto9')
 
-    setAccountData({
-      bio: data.bio,
-      name: data.name,
-      login: data.login,
-      company: data.company,
-      html_url: data.html_url,
-      followers: data.followers,
-      avatar_url: data.avatar_url,
-    })
+    setAccountData({ ...data })
   }
 
   useEffect(() => {

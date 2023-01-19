@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const CardContainer = styled.button`
+export const CardContainer = styled(Link)`
   width: 100%;
   padding: 2rem;
 
   border: none;
   outline: none;
+  text-decoration: none;
 
   display: flex;
   flex-direction: column;
@@ -35,10 +37,11 @@ export const CardContainer = styled.button`
   }
 
   section {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 1rem;
   }
 
