@@ -1,26 +1,20 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUpRightFromSquare, faBuilding, faUserGroup } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import {
+  faArrowUpRightFromSquare,
+  faBuilding,
+  faUserGroup,
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useContextSelector } from 'use-context-selector'
 
-import { GithubAccount } from "../../../../@types/github";
-import { gitHubUserApi } from "../../../../lib/axios";
-import { Icons, Info, Link, MainCardContainer } from "./styles";
+import { GithubAccountContext } from '../../../../context/githubAccount'
+import { Icons, Info, Link, MainCardContainer } from './styles'
 
 export function MainCard() {
-  const [accountData, setAccountData] = useState<GithubAccount>(
-    {} as GithubAccount,
+  const accountData = useContextSelector(
+    GithubAccountContext,
+    ({ account }) => account,
   )
-
-  async function getGithubAccount() {
-    const { data } = await gitHubUserApi.get<GithubAccount>('SidneyRoberto9')
-
-    setAccountData({ ...data })
-  }
-
-  useEffect(() => {
-    getGithubAccount()
-  }, [])
 
   return (
     <MainCardContainer>
