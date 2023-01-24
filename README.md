@@ -5,7 +5,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/SidneyRoberto9/GithubBlog-Ignite?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/SidneyRoberto9/GithubBlog-Ignite?style=for-the-badge)
 
-<a href="https://coffee-delivery-sid.netlify.app/" target="_blank">Demo</a>
+<a href="https://github-blog-sid.netlify.app/" target="_blank">Demo</a>
 
 <img src=".github/model.png" alt="exemplo imagem">
 <br /> 
