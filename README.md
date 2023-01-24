@@ -2,8 +2,8 @@
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-![GitHub repo size](https://img.shields.io/github/repo-size/SidneyRoberto9/GithubBlog-Ignite?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/SidneyRoberto9/GithubBlog-Ignite?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/SidneyRoberto9/github-blog?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/SidneyRoberto9/github-blog?style=for-the-badge)
 
 <a href="https://github-blog-sid.netlify.app/" target="_blank">Demo</a>
 
@@ -28,7 +28,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 Para usar o Github Blog, siga estas etapas:
 
 ```
-git clone https://github.com/SidneyRoberto9/GithubBlog-Ignite
+git clone https://github.com/SidneyRoberto9/github-blog
 
 yarn ou npm i
 
